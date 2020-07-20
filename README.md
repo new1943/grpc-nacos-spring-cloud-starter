@@ -15,3 +15,7 @@ final ManagedChannel channel = ManagedChannelBuilder.forAddress(instance.getIPAd
         stub.greet(name);
 
 ```
+
+Javaassist and CGLIB not support final class.
+JDK Proxy support interface only.
+I want client support @GrpcClient inject .support direct connect or broadcast call type with spring cloud discovery.
