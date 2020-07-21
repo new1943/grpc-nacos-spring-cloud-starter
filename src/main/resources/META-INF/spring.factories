@@ -1,1 +1,4 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.muse.grpc.config.GrpcAutoConfiguration,com.muse.grpc.nacos.NacosGrpcAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.muse.grpc.config.GrpcAutoConfiguration,\
+  com.muse.grpc.nacos.NacosGrpcAutoConfiguration,\
+  com.muse.grpc.nacos.NacosGrpcDiscoveryClientAutoConfiguration
