@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 
 /**
- * @author muse
+ * @author zhenglingbing
  */
 @ConfigurationProperties("grpc")
 public class GrpcServerProperties {

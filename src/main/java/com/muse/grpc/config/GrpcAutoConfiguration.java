@@ -1,8 +1,8 @@
 package com.muse.grpc.config;
 
-
 import com.muse.grpc.GrpcServer;
 import com.muse.grpc.annoation.GrpcService;
+import com.muse.grpc.context.GrpcClientBeanPostProcessor;
 import io.grpc.services.HealthStatusManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
@@ -24,6 +24,11 @@ public class GrpcAutoConfiguration {
     @ConditionalOnProperty(value = "grpc.enabled", havingValue = "true", matchIfMissing = true)
     public GrpcServer grpcServer() {
         return new GrpcServer();
+    }
+
+    @Bean
+    static GrpcClientBeanPostProcessor grpcClientBeanPostProcessor() {
+        return new GrpcClientBeanPostProcessor();
     }
 
     @Bean

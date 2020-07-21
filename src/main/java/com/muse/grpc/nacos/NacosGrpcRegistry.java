@@ -12,6 +12,8 @@ import org.springframework.context.event.EventListener;
 
 public class NacosGrpcRegistry implements SmartLifecycle {
 
+    public static final String GRPC_PREFIX = "grpc-";
+
     private final NacosServiceRegistry nacosServiceRegistry;
 
     private final GrpcServerProperties grpcServerProperties;
@@ -36,7 +38,7 @@ public class NacosGrpcRegistry implements SmartLifecycle {
         NacosDiscoveryProperties properties = new NacosDiscoveryProperties();
         BeanUtils.copyProperties(this.nacosDiscoveryProperties, properties);
         properties.setPort(grpcServerProperties.getPort());
-        properties.setService("grpc-" + nacosDiscoveryProperties.getService());
+        properties.setService(GRPC_PREFIX + nacosDiscoveryProperties.getService());
         return new NacosRegistration(properties, event.getApplicationContext());
     }
 

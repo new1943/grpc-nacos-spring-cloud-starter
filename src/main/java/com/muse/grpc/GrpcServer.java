@@ -1,9 +1,11 @@
 package com.muse.grpc;
 
+import com.alibaba.nacos.api.naming.pojo.Instance;
 import com.muse.grpc.annoation.GrpcGlobalInterceptor;
 import com.muse.grpc.annoation.GrpcService;
 import com.muse.grpc.config.GrpcServerProperties;
 import com.muse.grpc.context.GrpcServerInitializedEvent;
+import com.muse.grpc.utils.NetUtils;
 import io.grpc.*;
 import io.grpc.health.v1.HealthCheckResponse;
 import io.grpc.services.HealthStatusManager;
@@ -83,6 +85,13 @@ public class GrpcServer implements CommandLineRunner, DisposableBean {
         logger.info("gRPC Server started, listening on port {}.", server.getPort());
         startDaemonAwaitThread();
 
+    }
+
+    private Instance createInstance() {
+        Instance instance = new Instance();
+        instance.setIp(NetUtils.getLocalHost());
+        instance.setPort(grpcServerProperties.getPort());
+        return instance;
     }
 
     private ServerServiceDefinition bindInterceptors(ServerServiceDefinition serviceDefinition, GrpcService grpcService, Collection<ServerInterceptor> globalInterceptors) {

@@ -4,7 +4,6 @@ import com.alibaba.cloud.nacos.ConditionalOnNacosDiscoveryEnabled;
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
 import com.alibaba.cloud.nacos.registry.NacosServiceRegistry;
 import com.alibaba.cloud.nacos.registry.NacosServiceRegistryAutoConfiguration;
-
 import com.muse.grpc.GrpcServer;
 import com.muse.grpc.config.GrpcAutoConfiguration;
 import com.muse.grpc.config.GrpcServerProperties;
