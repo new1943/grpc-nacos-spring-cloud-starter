@@ -110,7 +110,7 @@ public class GrpcClientBeanPostProcessor extends AbstractAnnotationBeanPostProce
     private Channel createChannel(String service) {
         Assert.hasText(service, "service must not be null");
         NacosNameResolverProvider nacosNameResolverProvider = applicationContext.getBean(NacosNameResolverProvider.class);
-        return ManagedChannelBuilder.forTarget(service).nameResolverFactory(nacosNameResolverProvider).usePlaintext().build();
+        return ManagedChannelBuilder.forTarget(service).nameResolverFactory(nacosNameResolverProvider).defaultLoadBalancingPolicy("round_robin").usePlaintext().build();
     }
 
     protected String deriveStubFactoryMethodName(final Class<?> stubType) {
