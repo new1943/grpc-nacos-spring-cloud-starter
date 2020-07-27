@@ -1,4 +1,4 @@
-package com.muse.grpc.context;
+package com.github.muse.grpc.context;
 
 import io.grpc.Server;
 import org.springframework.context.ApplicationContext;

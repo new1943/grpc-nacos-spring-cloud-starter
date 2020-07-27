@@ -15,7 +15,7 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.muse.grpc.nacos;
+package com.github.muse.grpc.nacos;
 
 import com.alibaba.cloud.nacos.discovery.NacosDiscoveryClientConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;

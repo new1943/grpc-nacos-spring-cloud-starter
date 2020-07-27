@@ -1,4 +1,4 @@
-package com.muse.grpc.config;
+package com.github.muse.grpc.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

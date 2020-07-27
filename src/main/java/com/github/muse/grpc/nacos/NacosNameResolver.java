@@ -1,4 +1,4 @@
-package com.muse.grpc.nacos;
+package com.github.muse.grpc.nacos;
 
 import com.google.common.collect.Lists;
 import io.grpc.*;

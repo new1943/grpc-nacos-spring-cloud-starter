@@ -1,8 +1,8 @@
-package com.muse.grpc.context;
+package com.github.muse.grpc.context;
 
 import com.alibaba.spring.beans.factory.annotation.AbstractAnnotationBeanPostProcessor;
-import com.muse.grpc.annoation.GrpcClient;
-import com.muse.grpc.nacos.NacosNameResolverProvider;
+import com.github.muse.grpc.nacos.NacosNameResolverProvider;
+import com.github.muse.grpc.annoation.GrpcClient;
 import io.grpc.Channel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.AbstractAsyncStub;
@@ -52,7 +52,6 @@ public class GrpcClientBeanPostProcessor extends AbstractAnnotationBeanPostProce
     protected Object doGetInjectedBean(AnnotationAttributes attributes, Object bean, String beanName, Class<?> injectedType, InjectionMetadata.InjectedElement injectedElement) throws Exception {
         String name = generateBeanName(attributes, injectedType);
         AbstractStub s = buildGrpcClientBeanIfAbsent(name, attributes, injectedType);
-        getBeanFactory().registerSingleton(name, s);
         cacheInjectedBean(s, injectedElement);
         return s;
     }
@@ -83,6 +82,7 @@ public class GrpcClientBeanPostProcessor extends AbstractAnnotationBeanPostProce
         T s = (T) beanCache.get(beanName);
         if (s == null) {
             s = createStub(injectedType, createChannel(attributes.getString("service")));
+            getBeanFactory().registerSingleton(beanName, s);
             beanCache.put(beanName, s);
         }
         return s;

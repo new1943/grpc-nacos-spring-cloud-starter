@@ -1,4 +1,4 @@
-package com.muse.grpc.nacos;
+package com.github.muse.grpc.nacos;
 
 import io.grpc.NameResolver;
 import io.grpc.NameResolverProvider;

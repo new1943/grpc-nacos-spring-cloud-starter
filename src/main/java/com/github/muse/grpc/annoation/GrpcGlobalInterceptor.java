@@ -1,4 +1,4 @@
-package com.muse.grpc.annoation;
+package com.github.muse.grpc.annoation;
 
 import org.springframework.stereotype.Component;
 
