@@ -1,6 +1,10 @@
-Spring Cloud + Nacos + Grpc Support.
+# Nacos + Spring Cloud + Grpc.
 
-Server:
+Grpc Server and Client integration with Nacos
+
+## Usage
+
+**Server**:
 ```
 @GrpcService
 public class GreeterServiceImpl extends GreeterServiceGrpc.GreeterServiceImplBase {
@@ -12,23 +16,22 @@ public class GreeterServiceImpl extends GreeterServiceGrpc.GreeterServiceImplBas
 }
 ```
 
-Client:
+**Client** `Direct`:
 ```
 @GrpcClient
 private GreeterServiceGrpc.GreeterServiceFutureStub stub
 
-then
+// some code
 
 stub.greet();
-
 ```
 
-Client Broadcast:
+**Client** `Broadcast`:
 ```
 
-this.nacosDiscoveryProperties = ApplicationContextHelper.getBean(NacosDiscoveryProperties.class);
+NacosDiscoveryProperties nacosDiscoveryProperties = ApplicationContextHelper.getBean(NacosDiscoveryProperties.class);
 
-final Instance instance = this.nacosDiscoveryProperties.namingServiceInstance().selectOneHealthyInstance("xxxx", true);
+final Instance instance = nacosDiscoveryProperties.namingServiceInstance().selectOneHealthyInstance("xxxx", true);
 
 final ManagedChannel channel = ManagedChannelBuilder.forAddress(instance.getIPAddr(), instance.getPort())
                 .usePlaintext()
@@ -38,6 +41,6 @@ final ManagedChannel channel = ManagedChannelBuilder.forAddress(instance.getIPAd
 
 ```
 
-Javaassist and CGLIB not support final class.
+> **NOTE**: Javaassist and CGLIB not support final class.
 JDK Proxy support interface only.
 I want @GrpcClient inject and provider different call type, direct or broadcast. But currently only automatic inject and robin call available. if your have any idea, please contact me.
