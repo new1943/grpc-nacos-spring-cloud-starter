@@ -1,11 +1,11 @@
-package com.github.muse.grpc;
+package com.github.demo.grpc;
 
 import com.alibaba.nacos.api.naming.pojo.Instance;
-import com.github.muse.grpc.annoation.GrpcGlobalInterceptor;
-import com.github.muse.grpc.config.GrpcServerProperties;
-import com.github.muse.grpc.utils.NetUtils;
-import com.github.muse.grpc.annoation.GrpcService;
-import com.github.muse.grpc.context.GrpcServerInitializedEvent;
+import com.github.demo.grpc.annoation.GrpcGlobalInterceptor;
+import com.github.demo.grpc.annoation.GrpcService;
+import com.github.demo.grpc.context.GrpcServerInitializedEvent;
+import com.github.demo.grpc.config.GrpcServerProperties;
+import com.github.demo.grpc.utils.NetUtils;
 import io.grpc.*;
 import io.grpc.health.v1.HealthCheckResponse;
 import io.grpc.services.HealthStatusManager;

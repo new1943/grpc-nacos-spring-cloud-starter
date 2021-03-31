@@ -1,4 +1,4 @@
-package com.github.muse.grpc.utils;
+package com.github.demo.grpc.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

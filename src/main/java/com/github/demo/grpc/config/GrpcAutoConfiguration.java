@@ -1,8 +1,8 @@
-package com.github.muse.grpc.config;
+package com.github.demo.grpc.config;
 
-import com.github.muse.grpc.GrpcServer;
-import com.github.muse.grpc.annoation.GrpcService;
-import com.github.muse.grpc.context.GrpcClientBeanPostProcessor;
+import com.github.demo.grpc.GrpcServer;
+import com.github.demo.grpc.annoation.GrpcService;
+import com.github.demo.grpc.context.GrpcClientBeanPostProcessor;
 import io.grpc.services.HealthStatusManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;

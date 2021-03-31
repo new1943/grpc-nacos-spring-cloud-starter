@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>grpc-spring-cloud-support</artifactId>
+    <artifactId>grpc-nacos-spring-cloud-starter</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
@@ -69,8 +69,6 @@
             <version>${spring.cloud.alibaba.version}</version>
             <scope>provided</scope>
         </dependency>
-
-
     </dependencies>
 
 </project>

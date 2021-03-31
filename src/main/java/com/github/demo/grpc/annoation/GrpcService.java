@@ -1,4 +1,4 @@
-package com.github.muse.grpc.annoation;
+package com.github.demo.grpc.annoation;
 
 import io.grpc.ServerInterceptor;
 import org.springframework.stereotype.Service;

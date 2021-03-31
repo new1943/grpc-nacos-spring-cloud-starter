@@ -40,5 +40,4 @@ final ManagedChannel channel = ManagedChannelBuilder.forAddress(instance.getIPAd
 
 Javaassist and CGLIB not support final class.
 JDK Proxy support interface only.
-I want client support @GrpcClient inject .support direct connect or broadcast call type with spring cloud discovery.
-Currently only automatic injection is available
+I want @GrpcClient inject and provider different call type, direct or broadcast. But currently only automatic inject and robin call available. if your have any idea, please contact me.

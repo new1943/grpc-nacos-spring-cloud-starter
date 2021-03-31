@@ -1,11 +1,11 @@
-package com.github.muse.grpc.nacos;
+package com.github.demo.grpc.nacos;
 
 
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
 import com.alibaba.cloud.nacos.registry.NacosRegistration;
 import com.alibaba.cloud.nacos.registry.NacosServiceRegistry;
-import com.github.muse.grpc.config.GrpcServerProperties;
-import com.github.muse.grpc.context.GrpcServerInitializedEvent;
+import com.github.demo.grpc.config.GrpcServerProperties;
+import com.github.demo.grpc.context.GrpcServerInitializedEvent;
 import org.springframework.beans.BeanUtils;
 import org.springframework.context.SmartLifecycle;
 import org.springframework.context.event.EventListener;

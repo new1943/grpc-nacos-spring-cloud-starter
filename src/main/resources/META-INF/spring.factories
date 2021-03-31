@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.github.muse.grpc.config.GrpcAutoConfiguration,\
-  com.github.muse.grpc.nacos.NacosGrpcAutoConfiguration,\
-  com.github.muse.grpc.nacos.NacosGrpcDiscoveryClientAutoConfiguration
+  com.github.demo.grpc.config.GrpcAutoConfiguration,\
+  com.github.demo.grpc.nacos.NacosGrpcAutoConfiguration,\
+  com.github.demo.grpc.nacos.NacosGrpcDiscoveryClientAutoConfiguration

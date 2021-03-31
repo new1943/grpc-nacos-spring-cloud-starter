@@ -1,8 +1,8 @@
-package com.github.muse.grpc.context;
+package com.github.demo.grpc.context;
 
 import com.alibaba.spring.beans.factory.annotation.AbstractAnnotationBeanPostProcessor;
-import com.github.muse.grpc.nacos.NacosNameResolverProvider;
-import com.github.muse.grpc.annoation.GrpcClient;
+import com.github.demo.grpc.nacos.NacosNameResolverProvider;
+import com.github.demo.grpc.annoation.GrpcClient;
 import io.grpc.Channel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.AbstractAsyncStub;
