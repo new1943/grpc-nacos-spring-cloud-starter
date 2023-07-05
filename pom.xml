@@ -10,7 +10,7 @@
 
 
     <properties>
-        <grpc.version>1.30.2</grpc.version>
+        <grpc.version>1.53.0</grpc.version>
         <spring.cloud.version>Hoxton.SR6</spring.cloud.version>
         <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
         <spring.boot.version>2.3.0.RELEASE</spring.boot.version>
